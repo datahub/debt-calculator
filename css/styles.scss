@@ -1,0 +1,723 @@
+$hue1: #1E97CF;
+$textforhue1: white;
+$borderradius: 5px;
+$textboxcolor: #E6E7E8;
+$textboxtextcolor: #777777;
+$chattercolor: #565656;
+$red: #A73130;
+$green: #227840 ;
+$hue2: #03477A;
+$slidercolor: #D1D1D1;
+$interest:#36B579;
+
+/*super form reset*/
+
+.container #article{
+    display: none;
+}
+
+*{
+    -web-kit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+input{
+    margin:0;
+    border:0;
+    padding:0;
+    display:inline-block;
+    vertical-align:middle;
+    white-space:normal;
+    background:none;
+    line-height:1;
+    -webkit-appearance: none;
+    -webkit-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+}
+
+input[type=button]{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    overflow:visible;
+    width:auto;
+    -webkit-appearance: none;
+}
+
+/*our lovely css begins here*/
+
+#cal-content{
+    line-height: normal; 
+    font-size: 17px;
+    margin: 6em auto 0 auto;
+
+
+    h1,.embed.html ul,.cal-label,.cal-filterbox--typeahead ul,.cal-loan-details-container,.cal-button,.cal-textbox,.cal-slider-container,.cal-school-textbox, .cal-results,.cal-nationaldebt-label,.cal-narrative-super-group{
+       font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    h1,.cal-school-textbox,.cal-byline,.cal-button,.cal-results,.cal-slider-container,.cal-details-remove{
+        text-align: center;
+    }
+
+    h1{    -webkit-margin-before: 0;
+         -webkit-margin-after: 0;
+        margin-bottom: 0.5em;
+        
+    }
+
+    .cal-filterbox--typeahead,.cal-chatter,.cal-byline{
+        font-family: 'Tinos', serif;
+
+    }
+
+    .cal-chatter{
+        text-align: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        color: $chattercolor;
+        p.cal-relatedstory{
+            font-family: 'PT Sans Narrow'!important;
+            width: 100%;
+                font-size: 1.1em!important;
+                line-height: normal!important;
+                padding-top: 0.8em!important;
+
+
+            a:-moz-any-link{
+                color: $hue2;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            a:-webkit-any-link {
+                color: $hue2;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            a:-moz-any-link:hover {
+                text-decoration: underline;
+            }
+
+            a:-webkit-any-link:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    .cal-chatter.cal-source{
+        width: 80%;
+        font-size: 0.9em;
+        line-height: 1.3em;
+        text-align: left;
+
+    }
+
+    .cal-source{
+        border-top: solid #ddd 1px;
+        padding-top: 5px; 
+        margin-top: 2em
+    }
+
+    .cal-byline{
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        font-style: italic;
+    }
+
+    .cal-app{
+
+        margin-top: 2em;
+
+        .cal-inline{
+            display: inline-block;
+            padding: 0 0.5em 0 0.5em;
+        }
+
+        .cal-loan-details-container{
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+        }
+
+        .cal-loan-detail-bottom-box{
+            width: 100%;
+        }
+
+        .cal-textbox{
+            text-align: right;
+            background-color: $textboxcolor;
+            color: $textboxtextcolor;
+            border-radius: $borderradius;
+            height: 30px;
+            font-size: 1.6em;
+            padding: 0.3em;
+            width: 140px
+        }
+
+        .cal-textbox.cal-loanterm{
+            width: 60px;
+            padding-right: 2px;
+        }
+
+        .cal-loan-detail-def{
+            text-align: left;
+            font-size: 1.2em;
+        }
+
+        .cal-button{
+
+            font-size: 1.4em;
+            background-color: $hue1;
+            color: $textforhue1;
+            padding: 0.5em;
+            border-radius: $borderradius;
+            width: 150px;
+            margin: 1em auto 1em auto;
+        }
+
+        .cal-button:hover{
+            background-color: rgba(30,151,204,0.7);
+            cursor: pointer;
+        }
+
+        .cal-button-wrapper{
+            margin: 0 auto 0 auto;
+            width: 150px;
+        }
+
+        .cal-details-outside{
+            margin-top: 0.6em;
+            margin-bottom: 0.6em;
+        }
+
+        .cal-details-remove{
+            background-color: $red;
+            color: white;
+            padding: 0.3em;
+            font-size: 1.4em;
+            width: 30px;
+            border-radius: $borderradius;
+            display: inline-block;
+        }
+
+        .cal-details-remove:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        .cal-slider-container{
+            font-size: 1.4em;
+            min-height: 90px;
+            margin-bottom: 1em;
+            
+            .cal-payoff-mobile{
+                display: none;
+            }
+        }
+
+        #cal-monthpay-slider{
+            width: 50%;
+            margin: 0.5em auto 0.5em auto
+        }
+
+        .cal-section{
+            margin-top: 1em;
+            /*text-align: center;*/
+        }
+
+        .cal-schoolsearch-container{
+            text-align: center;
+
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1.5em;
+            .cal-school-textbox{
+                padding: 0.3em 0.3em 0.5em 0.3em;
+                font-size: 1.4em;
+                border-bottom: solid $slidercolor 3px;
+                width: 100%;
+                text-align: center;
+                margin-top: 0.5em
+            }
+
+            .cal-filterbox--typeahead{
+                font-family: PT Sans Narrow;
+                position: absolute;
+                left: 0;
+                width: 50%;
+                right: 0px;
+                margin: 0 10px;
+                max-height: 150px;
+                overflow-y: auto;
+                z-index: 20;
+                font-size: 14px;
+                border-right: 1px solid #e5e5e5;
+                border-left: 1px solid #e5e5e5;
+                background-color: white;
+                margin-left: auto;
+                margin-right: auto;
+                -webkit-box-shadow: 0px 3px 26px -5px rgba(48,48,48,0.58);
+                -moz-box-shadow: 0px 3px 26px -5px rgba(48,48,48,0.58);
+                box-shadow: 0px 3px 26px -5px rgba(48,48,48,0.58);
+             }
+
+            .cal-filterbox--results{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .cal-filterbox--results li {
+                margin: 0;
+                padding: 8px 10px;
+                list-style: none;
+                border-bottom: 1px solid #ddd;
+                font-size: 18px;
+                line-height: 1.1;
+                span{
+                    font-weight: bold
+                }
+             }
+
+             .cal-filterbox--results li:hover,.cal-filterbox--results li:focus {
+                cursor: pointer;
+                background-color: rgba(196,196,196,0.4);
+            }
+
+            .cal-school-textbox:focus{
+                outline: none;
+                border-bottom-color: $hue2 
+            }
+        }
+
+        .cal-schoolsearch-container label.cal-label{
+          -moz-transition: all .3s linear;
+            -webkit-transition: all .3s linear;
+            -o-transition: all .3s linear;
+            transition: all .3s linear;
+            margin-bottom: 0.5em;
+            font-size: 1.1em
+
+        }
+
+        .cal-schoolsearch-container.filterbox--filled label{
+            color: $hue2;
+
+        }
+
+        .cal-results{
+
+            .cal-result-block{
+                vertical-align: top;
+                 display: inline-block;
+                text-align: left;
+                margin: 1.5em 1.8em 1.5em 1.8em;
+            }
+
+            .cal-result-block.cal-result-big{
+                font-size: 1.3em;
+                display: block;
+                text-align: center;
+                margin-bottom: -2px
+            }
+
+            .cal-result-type{
+                font-size: 1.4em;
+            }
+
+            .cal-result-num{
+                font-size: 2em;
+                margin-top: 0.3em;
+                    font-weight: bold;
+                .cal-error{
+                    color: $textboxtextcolor;
+                    font-size: 0.7em;
+                    line-height: 0.9em;
+                    font-weight: normal;
+                }
+            }
+
+            .cal-yourdebt .cal-result-num{
+                color: $textboxtextcolor
+            }
+
+            .cal-yourdebt-main .cal-result-num{
+                color: $hue1;
+            }
+
+            .cal-schoolaverage .cal-result-num{
+                color: $hue2;
+            }
+
+            .cal-yourinterest .cal-result-num{
+                color: $interest
+            }
+        }
+
+        .cal-chart-container{
+            width: 500px;
+            height: 88px;
+            margin: 1em auto 2em auto;
+            position: relative;
+
+            .cal-move-nationaldebt{
+                -moz-transition: all .3s linear;
+                -webkit-transition: all .3s linear;
+                -o-transition: all .3s linear;
+                transition: all .3s linear;
+            }
+
+            .cal-chart {
+                width: 100%;
+                height: 60%;
+                position: absolute;
+                background-color: $textboxcolor;
+                
+
+                .cal-bar{
+                    -moz-transition: all .3s linear;
+                    -webkit-transition: all .3s linear;
+                    -o-transition: all .3s linear;
+                    transition: all .3s linear;
+                    width: 100%;
+                    max-width: 0%;
+                    left: 0;
+                    height: 100%;
+                    position: absolute;
+                }
+
+                .cal-schoolaverage{
+                    background-color: $hue2;
+                    position: absolute;
+                    height: 20%;
+                    top: 40%;
+                    z-index: 2;
+                }
+
+                .cal-persondebt{
+                    opacity: 0.8;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: 1;
+                }
+
+                .cal-persondebt-main{
+                    background-color: #1E97CF;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .cal-persondebt-int{
+                    background-color: $interest;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .cal-nationaldebt {
+                    position: absolute;
+                    background-color: black;
+                    height: 100%;
+                    width: 6px;
+                    z-index: 2;
+                    outline:  $textboxcolor solid 2px;
+                    
+                }
+
+            }
+
+            .cal-nationaldebt-label{
+                text-align: left;
+                position: absolute;
+                bottom: 0;
+                margin-left: -5px;
+                line-height: 10px;
+                font-size: 1em;
+                .cal-label-arrow {
+                    width: 0; 
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid black;
+                    margin-bottom: 7px;
+                }
+            }
+        }
+
+        .cal-narrative-super-group.cal-group-top{
+            min-height: 0;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.5em;
+            border-bottom: #ddd 1px solid;
+        }
+        .cal-narrative-super-group{
+            min-height: 200px;
+            max-width: 550px;
+            font-size: 1.3em;
+            line-height: 1.7em;
+            margin: 0 auto 0 auto;
+            text-align: center;
+            .cal-narrative-group{
+                display: block;
+            }
+            .cal-narrative-group.cal-hide{
+                display: none;
+            }
+            span{
+                margin: 0;
+                display: block;
+                .cal-comparison_percent,b{
+                    font-weight: bold;
+                    padding: 0.2em;
+                }
+                span{
+                    display: inline;
+                }
+
+                .cal-principal{
+                    color: $hue1;
+                    font-weight: bold;
+                }
+
+                .cal-lower{
+                    color: $green
+                }
+                .cal-higher{
+                    color: $red
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width: 700px){
+    #cal-content{
+        width: 90%;
+
+        .cal-chatter{
+             width: 100%;
+        }
+
+        .cal-app{
+            #cal-monthpay-slider{
+                width: 100%
+            }
+
+            .cal-schoolsearch-container{
+                width: 90%;
+                margin-bottom: 2em;
+                .cal-filterbox--typeahead{
+                    width: 90%;
+
+                }
+            }
+
+            .cal-chart-container{
+                width: 100%;
+            }
+
+            .cal-results{
+                font-size: 0.8em;
+                .cal-result-block.cal-result-big{
+                        width: 70%;
+                        margin-left: 2em;
+                        text-align: left;
+                        margin-bottom: 0.2em;
+                        .cal-result-num{
+                            margin-top: 0
+                        }
+                }
+                .cal-result-block{
+                    width: 24%;
+                    margin: 0.5em 1.1em 0.5em 1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 530px){
+     #cal-content{
+        .cal-app{
+            .cal-loan-detail{
+                width: 30%;
+                .cal-textbox{
+                    font-size: 1.3em;
+                    width:100%;
+                }
+            }
+            .cal-results{
+                text-align: center;
+                width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+                .cal-result-block,.cal-result-block.cal-result-big{
+                    text-align: center;
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding: 0.4em 0 0.4em 0;
+                    display: block;
+                    width: 100%;
+                    border-bottom: solid $slidercolor 1px;
+                }
+
+                .cal-result-block:last-of-type{
+                    border-bottom: none;
+                }
+            }
+
+            .cal-loan-detail.loanterm{
+                width: 20%
+            }
+        }
+    }
+}
+
+@media(max-width: 430px){
+    #cal-content{
+        width: 95%;
+        .cal-app{
+            .cal-loan-detail{
+                width: 30%;
+                .cal-textbox{
+                    font-size: 1.3em;
+                    width:100%;
+                }
+            }
+
+            .cal-loan-detail.loanterm{
+                width: 20%
+            }
+
+            .cal-details-outside{
+                .cal-details-remove{
+                    font-size: 1.3em;
+                        margin-left: 3%;
+                }
+            }  
+
+            .cal-narrative-super-group{
+                span{
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 340px){
+    #cal-content{
+        .cal-app{
+
+            
+
+            .cal-schoolsearch-container{
+                .cal-school-textbox{
+                    font-size: 1.3em;
+                }
+            }
+
+             .cal-slider-container{
+                min-height: 120px;
+             }
+        }
+    }
+}
+
+
+/*!
+ * jQuery UI Slider 1.10.4
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/slider/#theming
+ */
+.ui-slider {
+    position: relative;
+    text-align: left;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: $hue2;
+    border-radius: 12px;
+    cursor: col-resize;
+    margin-top: -3px;
+}
+
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}
+
+/* For IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+    filter: inherit;
+}
+
+.ui-slider-horizontal {
+    height: .3em;
+    background-color: $slidercolor;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border-radius: 10px
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.3em;
+    margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+}
+
+.ui-slider-vertical {
+    width: .8em;
+    height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+    left: -.3em;
+    margin-left: 0;
+    margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+    left: 0;
+    width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+    bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+    top: 0;
+}

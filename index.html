@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700,400|Tinos:400,400italic' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet">
+	<title>What's the real cost of your student loan?</title>
+</head>
+<body>
+    <div id = 'cal-content'>
+        <h1>What's the real cost of your student loan?</h1>
+        <div class = 'cal-byline'>
+            By Gurman Bhatia
+        </div>
+        <div class = 'cal-chatter'>The percentage of graduates with student debt is growing every year, and the national average for students graduating with student debt is now $28,950. Use our calculator to compare your debt with the average for the nation or a particular school.<p class = "cal-relatedstory"><b>Related story:</b> <a href = "http://www.jsonline.com/business/college-graduates-entering-strong-job-market-but-burdened-by-record-debt-b99723167z1-380135711.html">College graduates entering strong job market, but burdened by record debt</a></p></div>
+
+        <div class = 'cal-app'>
+            <div class = 'cal-loan-details-container'>
+                <div class = 'cal-loan-detail-top-box'>
+                    <div class = 'cal-loan-detail loanamount cal-inline'>
+                        <div class = 'cal-loan-detail-def'>
+                            Loan amount
+                        </div>
+                        <input type="text" aria-label="Loan amount" class = 'cal-textbox cal-loanamount cal-currency' value = "$28,950">
+                    </div>
+                    <div class = 'cal-loan-detail interestrate cal-inline'>
+                        <div class = 'cal-loan-detail-def'>
+                            Interest rate
+                        </div>
+                        <input type="text" aria-label="Interest rate" class = 'cal-textbox cal-interestrate cal-percentage' value = "4.29%">
+                    </div>
+                    <div class = 'cal-loan-detail loanterm cal-inline'>
+                        <div class = 'cal-loan-detail-def'>
+                            Term (years)
+                        </div>
+                        <input type="number" aria-label="Loan Term in years" class = 'cal-textbox cal-loanterm cal-number' value = "10" min = '1'>
+                    </div>
+                </div>
+                <div class = "cal-loan-detail-bottom-box">
+                </div>
+                <div class = 'cal-button-wrapper'>
+                    <input type="button" value = "Add a loan" class = 'cal-section adddetails cal-button' id = 'cal-adddetails' aria-label="Add a loan">
+                </div>
+            </div>
+            
+            <div class = 'cal-section cal-schoolsearch-container'>
+                <label class = 'cal-label'for="schoolsearch">Compare your debt with graduates of a school</label>
+                <input type="search" class="cal-school-textbox cal-search--autocomplete " name="search" placeholder="Start typing a school's name" autocomplete="off" aria-label="Type the name of a school" id = "schoolsearch">
+
+                <div class="cal-filterbox--typeahead">
+                    <ul role="menu" class="cal-filterbox--results"></ul>
+                </div>
+            </div>
+            <div class = 'cal-results'>
+                <div class = 'cal-yourdebt cal-result-big cal-result-block'>
+                    <div class = 'cal-result-type'> Your debt with interest</div>
+                    <div class = 'cal-result-num'></div>
+                </div>
+                <div class = 'cal-yourdebt-main cal-result-block'>
+                    <div class = 'cal-result-type'> Your principal</div>
+                    <div class = 'cal-result-num'></div>
+                </div>
+                <div class = 'cal-yourinterest cal-result-block'>
+                    <div class = 'cal-result-type'> Your interest</div>
+                    <div class = 'cal-result-num'></div>
+                </div>
+                <div class = 'cal-schoolaverage cal-result-block'>
+                    <div class = 'cal-result-type'> School average debt</div>
+                    <div class = 'cal-result-num'><span class =' cal-error'>Not available</span></div>
+                </div>
+                <div class = 'cal-nationalaverage cal-result-block'>
+                    <div class = 'cal-result-type'>National average debt</div>
+                    <div class = 'cal-result-num'></div>
+                </div>
+            </div>
+            <div class = 'cal-chart-container'>
+                <div class = 'cal-chart'>
+                    <div class = 'cal-bar cal-schoolaverage'></div>
+                    <div class = 'cal-bar cal-persondebt'><div class = 'cal-persondebt-main'></div><div class = 'cal-persondebt-int'></div></div>
+                    <div class = 'cal-line cal-nationaldebt cal-move-nationaldebt'></div>
+                </div>
+                <div class = 'cal-nationaldebt-label cal-move-nationaldebt'>
+                    <div class = 'cal-label-arrow'></div>
+                    <div class = 'cal-label-text'>National average</div>
+                </div>
+            </div>
+            <div class = 'cal-narrative-super-group cal-group-top'>
+
+                <div class = 'cal-narrative-group'>
+
+                    <span class = 'cal-narrative cal-narrative-national'></span>
+
+                    <span class = 'cal-narrative cal-narrative-school'></span>
+
+                </div>
+
+            </div>
+             <div class = 'cal-section cal-slider-container'>
+                <div class = 'cal-slider-instructions'>Adjust the slider to increase your <b>monthly payments</b></div>
+                <div class = 'cal-slider-things'>
+                    <div class = 'cal-slider' id = 'cal-monthpay-slider'></div>
+                    <div class = 'cal-time-wrapper'><span class = 'cal-payoff-mobile'>Monthly payments: </span><span class = 'cal-time-text'></span></div>
+                </div>
+            </div>
+            <div class = 'cal-narrative-super-group'>
+                <div class = 'cal-narrative-group'>
+                    <span class = 'cal-narrative cal-narrative-month'></span>
+                </div>
+                <p class = 'cal-error cal-narrative'></p>
+            </div>
+        </div>
+         <div class = 'cal-chatter cal-source'>
+        Student debt for individual colleges: The Institute for College Access & Success, CollegeInSight, http://college-insight.org. Student debt and undergraduate financial aid data from 2013-14 are from Peterson's Undergraduate Financial Aid and Undergraduate Databases. The national average figure just takes into account non-profit and public colleges. Of 2,000 non-profit and public colleges included in the data, you can search from among the 1,112 schools that had average debt information available.
+        </div>
+    </div>
+    <script type="jst" id = 'cal-add-details-template'>
+        <div class = 'cal-details-outside'><div class = 'cal-loan-detail loanamount cal-inline'><input type="text" class = 'cal-textbox cal-loanamount cal-currency' val = '$0'placeholder="Enter amount"></div><div class = 'cal-loan-detail interestrate cal-inline'><input type="text" class = 'cal-textbox cal-interestrate cal-percentage' placeholder="Enter rate" val = '0%'></div><div class = 'cal-loan-detail loanterm cal-inline'><input type="number" aria-label="Loan Term" class = 'cal-textbox cal-loanterm cal-number' value = "10" min = '1'></div><div class='cal-remove-wrapper cal-inline'><input type='button' value="X"aria-label="Delete" class = 'cal-details-remove'></div>
+    </script>
+	<script type="text/javascript" src = "js/bundle.js"></script>
+</body>
+</html>

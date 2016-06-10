@@ -1,0 +1,28 @@
+{
+  "name": "debt-calculator",
+  "version": "1.0.0",
+  "description": "For a js online interactive on student debt",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.14"
+  },
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "webpack -p"
+  },
+  "author": "datahub",
+  "license": "",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "jquery": "^2.2.3",
+    "jquery-ui": "^1.10.5",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "underscore": "^1.8.3",
+    "webpack": "^1.13.0"
+  }
+}
